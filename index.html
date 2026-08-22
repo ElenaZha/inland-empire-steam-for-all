@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inland Empire STEAM for All — STEAM Access Starts Here</title>
+<meta name="description" content="Inland Empire STEAM for All brings free STEM and STEAM enrichment programs — including a youth chess program and a math club — to kids across San Bernardino and Riverside counties.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="components.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<header class="site-header">
+  <div class="container site-header__row">
+    <a href="index.html" class="brand">
+      <img src="assets/logo-mark-nav.png" alt="Inland Empire STEAM for All logo" class="brand__mark">
+      <span>IE STEAM for All</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Primary" style="display:flex; align-items:center; gap:1.75rem;">
+      <a href="index.html" class="nav-link" aria-current="page">Home</a>
+      <a href="chess-program.html" class="nav-link">Chess Program</a>
+      <a href="math-club.html" class="nav-link">Math Club</a>
+      <a href="private-coaching.html" class="nav-link">Private Coaching</a>
+      <a href="about.html" class="nav-link">About Us</a>
+      <a href="#get-involved" class="btn btn-primary">Donate</a>
+    </nav>
+    <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" onclick="toggleMobileMenu(this)">
+      <svg id="nav-icon-menu" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg id="nav-icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" style="display:none;" aria-hidden="true"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+    </button>
+  </div>
+  <nav class="mobile-menu container" id="mobile-menu" aria-label="Mobile">
+    <a href="index.html" class="nav-link" aria-current="page">Home</a>
+    <a href="chess-program.html" class="nav-link">Chess Program</a>
+    <a href="math-club.html" class="nav-link">Math Club</a>
+    <a href="private-coaching.html" class="nav-link">Private Coaching</a>
+    <a href="about.html" class="nav-link">About Us</a>
+    <a href="#get-involved" class="btn btn-primary" style="margin-top:0.5rem; align-self:flex-start;">Donate</a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- BRAND MASTHEAD: documented use of assets/logo-wordmark-banner.png.
+       Wide source banner (6250x2344) is contained, never stretched, inside
+       a bordered card so it reads as one deliberate brand moment above the
+       hero rather than a full-bleed graphic. See design-system/MASTER.md
+       "Logo / Brand Assets" for sizing rules. -->
+  <section class="container" style="padding-top:2rem;">
+    <div style="max-width:36rem; margin:0 auto; background:#fff; border:1px solid var(--color-border); border-radius:var(--radius-lg); padding:1.5rem; box-shadow:var(--shadow-sm);">
+      <img src="assets/logo-wordmark-banner.png" alt="Inland Empire STEAM for All — sunrise and mountain wordmark banner" style="width:100%; height:auto; display:block;">
+    </div>
+  </section>
+
+  <!-- HERO: .hero--split -->
+  <section class="container">
+    <div class="hero hero--split">
+      <div>
+        <p class="eyebrow" style="margin-bottom:1rem;">Inland Empire STEAM for All</p>
+        <h1 class="hero__headline">STEAM access<br>starts here.</h1>
+        <p class="max-prose" style="margin-top:1.5rem; font-size:1.125rem; color:var(--color-ink-muted);">
+          We bring hands-on science, technology, engineering, arts, and math enrichment to
+          youth across San Bernardino and Riverside counties &mdash; free of charge, built
+          alongside the schools, clubs, and community centers kids already know and trust.
+        </p>
+        <div style="display:flex; gap:1rem; margin-top:2rem; flex-wrap:wrap;">
+          <a href="#get-involved" class="btn btn-primary">Get Involved</a>
+          <a href="#programs" class="btn btn-outline">See Our Programs</a>
+        </div>
+      </div>
+      <div class="hero__image-frame">
+        <img src="https://picsum.photos/seed/ie-steam-hands-on-project/900/700" width="900" height="700" alt="A small group of students gathered around a table working on a hands-on STEAM project.">
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPACT / STAT STRIP -->
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow">By the numbers</p>
+      <h2 style="font-size:1.75rem; margin-top:0.5rem; margin-bottom:2rem;">Our impact so far</h2>
+      <div class="bento">
+        <div class="card stat-card"><span class="stat-card__number">3</span><span class="stat-card__label">Flagship programs</span></div>
+        <div class="card stat-card"><span class="stat-card__number">200+</span><span class="stat-card__label">Students served</span></div>
+        <div class="card stat-card"><span class="stat-card__number">2</span><span class="stat-card__label">Community partners</span></div>
+        <div class="card stat-card"><span class="stat-card__number">100%</span><span class="stat-card__label">Free for families</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAMS: bento of program-cards, sized differently on purpose -->
+  <section id="programs" class="section section-alt">
+    <div class="container">
+      <p class="eyebrow">Our programs</p>
+      <h2 style="font-size:1.75rem; margin-top:0.5rem; margin-bottom:0.75rem;">Three flagship programs, built with our community</h2>
+      <p class="max-prose" style="color:var(--color-ink-muted); margin-bottom:2.5rem;">
+        Every program runs in partnership with a local school or club, so kids show up
+        somewhere they already feel at home.
+      </p>
+      <div class="bento">
+
+        <article class="card program-card span-2">
+          <div class="program-card__image">
+            <img src="https://picsum.photos/seed/ie-chess-program-card/800/600" width="800" height="600" alt="Two young students concentrating over a chessboard during an after-school session.">
+          </div>
+          <span class="tag tag--terracotta">Chess Program</span>
+          <h3>Youth Chess Program</h3>
+          <p style="color:var(--color-ink-muted);">
+            A free, weekly chess enrichment program at the Redlands Boys &amp; Girls Club,
+            building focus, patience, and confidence one game at a time.
+          </p>
+          <div class="program-card__meta">
+            <span>Grades 3&ndash;8</span>
+            <span>Fri, 4:00&ndash;5:00pm</span>
+          </div>
+          <a href="chess-program.html" class="program-card__link">
+            Learn more
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="13 5 20 12 13 19"/></svg>
+          </a>
+        </article>
+
+        <article class="card program-card span-2">
+          <div class="program-card__image">
+            <img src="https://picsum.photos/seed/ie-math-club-card/800/600" width="800" height="600" alt="A student presenting a solution on a whiteboard to classmates during a math club meeting.">
+          </div>
+          <span class="tag tag--green">Math Club</span>
+          <h3>Youth Math Club</h3>
+          <p style="color:var(--color-ink-muted);">
+            A weekly problem-solving club at Cope Middle School, where members build number
+            sense and get ready for local math competitions together.
+          </p>
+          <div class="program-card__meta">
+            <span>Grades 6&ndash;8</span>
+            <span>Thu, 3:30&ndash;4:30pm</span>
+          </div>
+          <a href="math-club.html" class="program-card__link">
+            Learn more
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="13 5 20 12 13 19"/></svg>
+          </a>
+        </article>
+
+        <article class="card program-card span-2">
+          <div class="program-card__image">
+            <img src="https://picsum.photos/seed/ie-private-coaching-card/800/600" width="800" height="600" alt="A coach and a student working one-on-one at a small table with notebooks open.">
+          </div>
+          <span class="tag tag--gold">Private Coaching</span>
+          <h3>1-on-1 Coaching</h3>
+          <p style="color:var(--color-ink-muted);">
+            For students who want more focused attention, our vetted coaches offer
+            personalized math and chess instruction on a sliding scale.
+          </p>
+          <div class="program-card__meta">
+            <span>All ages</span>
+            <span>In-person or online</span>
+          </div>
+          <a href="private-coaching.html" class="program-card__link">
+            Learn more
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="13 5 20 12 13 19"/></svg>
+          </a>
+        </article>
+
+        <div class="card card--ghost span-2" aria-hidden="false">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:1rem;" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          <h3 style="font-size:1.25rem; color:var(--color-ink);">More programs coming soon</h3>
+          <p style="margin-top:0.5rem;">
+            We're growing. Have an idea for a new enrichment program at your school or
+            community center? We build new programs the same way we built these two &mdash;
+            with a local partner.
+          </p>
+          <a href="about.html#get-involved" class="program-card__link" style="margin-top:1.25rem;">
+            Suggest a program
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="13 5 20 12 13 19"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- GET INVOLVED / DONATE CTA -->
+  <section id="get-involved" class="section">
+    <div class="container">
+      <div class="cta-band">
+        <h2 style="font-size:1.75rem; max-width:32rem;">Help more Inland Empire kids discover STEAM</h2>
+        <p style="margin-top:0.75rem; max-width:36rem;">
+          Every program we run is free for families. That's only possible with donors,
+          volunteers, and partner organizations willing to open their doors.
+        </p>
+        <div class="bento" style="margin-top:2rem;">
+          <div class="span-2" style="border:1px solid rgba(255,255,255,0.16); border-radius:var(--radius-md); padding:1.5rem;">
+            <h3 style="font-size:1.125rem; color:#fff; font-family:var(--font-body); font-weight:600;">Donate</h3>
+            <p style="margin-top:0.5rem; font-size:0.9375rem;">Fund program materials, transportation, and tournament fees.</p>
+            <a href="#" class="btn btn-outline-light" style="margin-top:1.25rem;">Give Now</a>
+          </div>
+          <div class="span-2" style="border:1px solid rgba(255,255,255,0.16); border-radius:var(--radius-md); padding:1.5rem;">
+            <h3 style="font-size:1.125rem; color:#fff; font-family:var(--font-body); font-weight:600;">Volunteer</h3>
+            <p style="margin-top:0.5rem; font-size:0.9375rem;">Coach a session, mentor a student, or help run a tournament day.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScpyhfeBJt1nTk-xENxERxDrLlfmYerFYKBM7iiSqoV8oqOFQ/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light" style="margin-top:1.25rem;">Get Started</a>
+          </div>
+          <div class="span-2" style="border:1px solid rgba(255,255,255,0.16); border-radius:var(--radius-md); padding:1.5rem;">
+            <h3 style="font-size:1.125rem; color:#fff; font-family:var(--font-body); font-weight:600;">Partner With Us</h3>
+            <p style="margin-top:0.5rem; font-size:0.9375rem;">Host a program at your school, club, or community center.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdqYti_r5vIWLEySTGfPis5CJYnU0t-V4zqhLD_rwTT0LVi7g/viewform?usp=sharing&amp;ouid=114663552527225019683" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light" style="margin-top:1.25rem;">Reach Out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div style="display:grid; grid-template-columns:1fr; gap:2.5rem;" class="md-grid-4">
+      <div>
+        <a href="index.html" class="brand" style="color:#fff;">
+          <img src="assets/logo-mark-nav.png" alt="Inland Empire STEAM for All logo" class="brand__mark brand__mark--sm">
+          <span>IE STEAM for All</span>
+        </a>
+        <p style="margin-top:1rem; font-size:0.875rem; color:#B7AF9C; max-width:22rem;">
+          Free STEM and STEAM enrichment for Inland Empire youth, built with the schools and
+          community partners kids already trust.
+        </p>
+        <p style="margin-top:1rem; font-size:0.875rem; display:flex; align-items:center; gap:0.5rem;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-7.2-7-12a7 7 0 1 1 14 0c0 4.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.3"/></svg>
+          Serving San Bernardino &amp; Riverside counties
+        </p>
+      </div>
+      <div>
+        <h4>Programs</h4>
+        <a href="chess-program.html">Chess Program</a><br>
+        <a href="math-club.html">Math Club</a><br>
+        <a href="private-coaching.html">Private Coaching</a>
+      </div>
+      <div>
+        <h4>Organization</h4>
+        <a href="about.html">About Us</a><br>
+        <a href="index.html#get-involved">Get Involved</a><br>
+        <a href="mailto:hello@iesteamforall.org">Contact</a>
+      </div>
+      <div>
+        <h4>Stay updated</h4>
+        <form onsubmit="return handleNewsletterSubmit(event)">
+          <label for="newsletter-email" class="footer-label">Email address</label>
+          <div style="display:flex; gap:0.5rem;">
+            <input id="newsletter-email" name="email" type="email" required placeholder="you@example.com" class="footer-input" aria-describedby="newsletter-hint">
+            <button type="submit" class="btn btn-outline-light" style="padding:0 1.25rem;" aria-label="Sign up for updates">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>
+            </button>
+          </div>
+          <p id="newsletter-hint" class="footer-form-status" style="margin-top:0.5rem; font-size:0.75rem; color:#948C7B;">Program updates a few times a year. No spam.</p>
+        </form>
+      </div>
+    </div>
+    <div style="margin-top:3rem; padding-top:1.5rem; border-top:1px solid #3C3830;">
+      <p style="font-size:0.75rem; color:#948C7B;">
+        &copy; 2026 Inland Empire STEAM for All. A hypothetical nonprofit concept built for
+        design purposes &mdash; names, partners, and figures are illustrative filler content.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+<style>
+  @media (min-width: 768px) {
+    .md-grid-4 { grid-template-columns: 1.4fr 1fr 1fr 1.2fr !important; }
+  }
+</style>
+</body>
+</html>

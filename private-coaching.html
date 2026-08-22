@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Private Coaching | Inland Empire STEAM for All</title>
+<meta name="description" content="One-on-one math and chess coaching from vetted coaches, offered on a sliding scale to Inland Empire families.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="components.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<header class="site-header">
+  <div class="container site-header__row">
+    <a href="index.html" class="brand">
+      <img src="assets/logo-mark-nav.png" alt="Inland Empire STEAM for All logo" class="brand__mark">
+      <span>IE STEAM for All</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Primary" style="display:flex; align-items:center; gap:1.75rem;">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="chess-program.html" class="nav-link">Chess Program</a>
+      <a href="math-club.html" class="nav-link">Math Club</a>
+      <a href="private-coaching.html" class="nav-link" aria-current="page">Private Coaching</a>
+      <a href="about.html" class="nav-link">About Us</a>
+      <a href="index.html#get-involved" class="btn btn-primary">Donate</a>
+    </nav>
+    <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" onclick="toggleMobileMenu(this)">
+      <svg id="nav-icon-menu" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg id="nav-icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" style="display:none;" aria-hidden="true"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+    </button>
+  </div>
+  <nav class="mobile-menu container" id="mobile-menu" aria-label="Mobile">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="chess-program.html" class="nav-link">Chess Program</a>
+    <a href="math-club.html" class="nav-link">Math Club</a>
+    <a href="private-coaching.html" class="nav-link" aria-current="page">Private Coaching</a>
+    <a href="about.html" class="nav-link">About Us</a>
+    <a href="index.html#get-involved" class="btn btn-primary" style="margin-top:0.5rem; align-self:flex-start;">Donate</a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- HERO: .hero--split (borrowed from Home, since this reads as a service offering rather than a single flagship program) -->
+  <section class="container">
+    <div class="hero hero--split">
+      <div>
+        <span class="tag tag--gold" style="margin-bottom:1rem;">Private Coaching</span>
+        <h1 class="hero__headline" style="font-size:2.75rem;">One-on-one,<br>at your pace.</h1>
+        <p class="max-prose" style="margin-top:1.5rem; font-size:1.125rem; color:var(--color-ink-muted);">
+          For students who want more focused attention than a group program allows, our
+          private coaching pairs kids with a coach for personalized math or chess
+          instruction &mdash; in person around the Inland Empire, or online.
+        </p>
+        <div style="display:flex; gap:1rem; margin-top:2rem; flex-wrap:wrap;">
+          <a href="mailto:hello@iesteamforall.org" class="btn btn-primary" style="background:var(--color-gold);">Request a Coach</a>
+          <a href="#coaches" class="btn btn-outline">Meet the Coaches</a>
+        </div>
+      </div>
+      <div class="hero__image-frame">
+        <img src="https://picsum.photos/seed/ie-private-coaching-session/900/700" width="900" height="700" alt="A coach and a student sitting together at a small table, reviewing a notebook of math problems.">
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container max-prose">
+      <p class="eyebrow">How it works</p>
+      <h2 style="font-size:1.75rem; margin-top:0.5rem; margin-bottom:1.25rem;">A coach matched to your kid</h2>
+      <p style="color:var(--color-ink-muted); font-size:1.0625rem;">
+        We start with a short intake call to understand where your child is and what they
+        want more of &mdash; confidence with fractions, a shot at the school chess team,
+        prep for a specific exam. From there, we match your family with one of our vetted
+        coaches for weekly sessions, offered in 4- and 8-week blocks so you can try it out
+        before committing further.
+      </p>
+    </div>
+  </section>
+
+  <!-- COACH-BIO CARDS: new .coach-card variant inside the existing .bento grid -->
+  <section id="coaches" class="section section-alt">
+    <div class="container">
+      <p class="eyebrow">Meet the coaches</p>
+      <h2 style="font-size:1.75rem; margin-top:0.5rem; margin-bottom:2rem;">Coaches</h2>
+      <div class="bento">
+
+        <article class="card coach-card span-2">
+          <div class="coach-card__image">
+            <img src="assets/empty-profile.png" width="600" height="600" alt="Portrait of coach Priya Shah smiling in front of a whiteboard.">
+          </div>
+          <h3>Elena Zhang</h3>
+          <span class="tag tag--gold">Algebra &amp; Competition Math</span>
+          <span class="coach-card__credentials"> 6+ years competition math, AP Calculus BC: 5 &middot; 6 yrs tutoring</span>
+          <p style="color:var(--color-ink-muted); font-size:0.9375rem;">Works with students up to AP Calculus level, competition math (AMC, AIME, MATHCOUNTS)</p>
+        </article>
+
+        <article class="card coach-card span-2">
+          <div class="coach-card__image">
+            <img src="assets/empty-profile.png" width="600" height="600" alt="Portrait of coach Jordan Lee holding a chess piece.">
+          </div>
+          <h3>Elena Zhang</h3>
+          <span class="tag tag--gold">Chess</span>
+          <span class="coach-card__credentials">FIDE Woman Candidate Master &middot; 6 yrs coaching</span>
+          <p style="color:var(--color-ink-muted); font-size:0.9375rem;">Works with kids aiming for any level of chess play. First tournament, to 1500 rated.</p>
+        </article>
+
+        <article class="card coach-card span-2">
+          <div class="coach-card__image">
+            <img src="assets/empty-profile.png" width="600" height="600" alt="Portrait of coach Marcus Bell in a classroom with a small robotics kit on the table.">
+          </div>
+          <h3>Marcus Bell</h3>
+          <span class="tag tag--gold">STEM &amp; Robotics</span>
+          <span class="coach-card__credentials">M.Ed. STEM Education, CSUSB &middot; 8 yrs teaching</span>
+          <p style="color:var(--color-ink-muted); font-size:0.9375rem;">Great fit for kids who learn best by building and taking things apart.</p>
+        </article>
+
+        <article class="card coach-card span-2">
+          <div class="coach-card__image">
+            <img src="assets/empty-profile.png" width="600" height="600" alt="Portrait of coach Sophia Alvarez sitting at a table with a young student's workbook open.">
+          </div>
+          <h3>Sophia Alvarez</h3>
+          <span class="tag tag--gold">Elementary Math Foundations</span>
+          <span class="coach-card__credentials">B.A. Liberal Studies, credentialed teacher &middot; 10 yrs teaching</span>
+          <p style="color:var(--color-ink-muted); font-size:0.9375rem;">Specializes in rebuilding number confidence for grades K&ndash;5.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- RATES / SCHEDULING NOTE: plain .card spanning the full bento row -->
+  <section class="section">
+    <div class="container">
+      <div class="bento">
+        <div class="card span-4">
+          <h3 style="font-size:1.25rem;">Rates &amp; scheduling</h3>
+          <p style="color:var(--color-ink-muted); margin-top:0.75rem; max-width:44rem;">
+            Sessions are offered in 4- and 8-week blocks, priced $35&ndash;$55 per hour on a
+            sliding scale. Need-based discounts are available &mdash; no family is turned
+            away for inability to pay. 100% of revenue is reinvested into the program. In-person sessions are available across the Inland
+            Empire; online sessions are available anywhere.
+          </p>
+          <a href="mailto:hello@iesteamforall.org" class="btn btn-primary" style="margin-top:1.5rem; background:var(--color-gold);">Request a Coach</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div style="display:grid; grid-template-columns:1fr; gap:2.5rem;" class="md-grid-4">
+      <div>
+        <a href="index.html" class="brand" style="color:#fff;">
+          <img src="assets/logo-mark-nav.png" alt="Inland Empire STEAM for All logo" class="brand__mark brand__mark--sm">
+          <span>IE STEAM for All</span>
+        </a>
+        <p style="margin-top:1rem; font-size:0.875rem; color:#B7AF9C; max-width:22rem;">
+          Free STEM and STEAM enrichment for Inland Empire youth, built with the schools and
+          community partners kids already trust.
+        </p>
+        <p style="margin-top:1rem; font-size:0.875rem; display:flex; align-items:center; gap:0.5rem;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-7.2-7-12a7 7 0 1 1 14 0c0 4.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.3"/></svg>
+          Serving San Bernardino &amp; Riverside counties
+        </p>
+      </div>
+      <div>
+        <h4>Programs</h4>
+        <a href="chess-program.html">Chess Program</a><br>
+        <a href="math-club.html">Math Club</a><br>
+        <a href="private-coaching.html">Private Coaching</a>
+      </div>
+      <div>
+        <h4>Organization</h4>
+        <a href="about.html">About Us</a><br>
+        <a href="index.html#get-involved">Get Involved</a><br>
+        <a href="mailto:hello@iesteamforall.org">Contact</a>
+      </div>
+      <div>
+        <h4>Stay updated</h4>
+        <form onsubmit="return handleNewsletterSubmit(event)">
+          <label for="newsletter-email" class="footer-label">Email address</label>
+          <div style="display:flex; gap:0.5rem;">
+            <input id="newsletter-email" name="email" type="email" required placeholder="you@example.com" class="footer-input" aria-describedby="newsletter-hint">
+            <button type="submit" class="btn btn-outline-light" style="padding:0 1.25rem;" aria-label="Sign up for updates">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>
+            </button>
+          </div>
+          <p id="newsletter-hint" class="footer-form-status" style="margin-top:0.5rem; font-size:0.75rem; color:#948C7B;">Program updates a few times a year. No spam.</p>
+        </form>
+      </div>
+    </div>
+    <div style="margin-top:3rem; padding-top:1.5rem; border-top:1px solid #3C3830;">
+      <p style="font-size:0.75rem; color:#948C7B;">
+        &copy; 2026 Inland Empire STEAM for All. A hypothetical nonprofit concept built for
+        design purposes &mdash; names, partners, and figures are illustrative filler content.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+<style>
+  @media (min-width: 768px) {
+    .md-grid-4 { grid-template-columns: 1.4fr 1fr 1fr 1.2fr !important; }
+  }
+</style>
+</body>
+</html>

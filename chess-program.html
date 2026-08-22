@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Youth Chess Program | Inland Empire STEAM for All</title>
+<meta name="description" content="A free, weekly youth chess enrichment program run in partnership with the Redlands Boys & Girls Club.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="components.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<header class="site-header">
+  <div class="container site-header__row">
+    <a href="index.html" class="brand">
+      <img src="assets/logo-mark-nav.png" alt="Inland Empire STEAM for All logo" class="brand__mark">
+      <span>IE STEAM for All</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Primary" style="display:flex; align-items:center; gap:1.75rem;">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="chess-program.html" class="nav-link" aria-current="page">Chess Program</a>
+      <a href="math-club.html" class="nav-link">Math Club</a>
+      <a href="private-coaching.html" class="nav-link">Private Coaching</a>
+      <a href="about.html" class="nav-link">About Us</a>
+      <a href="index.html#get-involved" class="btn btn-primary">Donate</a>
+    </nav>
+    <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" onclick="toggleMobileMenu(this)">
+      <svg id="nav-icon-menu" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg id="nav-icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" style="display:none;" aria-hidden="true"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+    </button>
+  </div>
+  <nav class="mobile-menu container" id="mobile-menu" aria-label="Mobile">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="chess-program.html" class="nav-link" aria-current="page">Chess Program</a>
+    <a href="math-club.html" class="nav-link">Math Club</a>
+    <a href="private-coaching.html" class="nav-link">Private Coaching</a>
+    <a href="about.html" class="nav-link">About Us</a>
+    <a href="index.html#get-involved" class="btn btn-primary" style="margin-top:0.5rem; align-self:flex-start;">Donate</a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section class="container" style="padding-top:2rem;">
+    <div class="hero hero--full-bleed">
+      <img src="https://picsum.photos/seed/chess-program-students/1600/900" width="1600" height="900" alt="Two students facing each other over a chessboard, deep in concentration mid-game.">
+      <div class="hero--full-bleed__content">
+        <span class="tag tag--terracotta" style="margin-bottom:1rem;">Youth Chess Program</span>
+        <h1 style="font-size:2.5rem; max-width:34rem;">Checkmate the achievement gap.</h1>
+        <p style="max-width:32rem; margin-top:1rem; color:#EDE8DC;">
+          A free, weekly chess enrichment program for Inland Empire youth &mdash; building
+          focus, patience, and confidence through the game of kings.
+        </p>
+        <a href="#join" class="btn btn-primary" style="margin-top:1.5rem;">Join a Session</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container max-prose">
+      <p class="eyebrow">Program overview</p>
+      <h2 style="font-size:1.75rem; margin-top:0.5rem; margin-bottom:1.25rem;">More than a game</h2>
+      <p style="color:var(--color-ink-muted); font-size:1.0625rem;">
+        Our Youth Chess Program is open to any student in grades 3 through 8, no experience
+        required. Beginners learn the rules and basic tactics alongside returning members
+        who are prepping for their next tournament &mdash; everyone plays at their own level,
+        and older members regularly coach the newer ones.
+      </p>
+      <p style="color:var(--color-ink-muted); font-size:1.0625rem; margin-top:1rem;">
+        Chess turns out to be a surprisingly effective vehicle for the skills we most want
+        kids to practice: sitting with a hard problem instead of giving up on it, thinking a
+        few moves ahead, and losing gracefully often enough to keep playing anyway. We share 
+        tournament information, with locally organized tournaments coming soon.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="partner-credit">
+        <div class="partner-credit__mark" aria-hidden="true">RB</div>
+        <div class="partner-credit__body">
+          <p class="eyebrow" style="margin-bottom:0.35rem;">In partnership with</p>
+          <p class="partner-credit__name">Redlands Boys &amp; Girls Club</p>
+          <p style="color:var(--color-ink-muted); margin-top:0.5rem; max-width:38rem;">
+            Sessions are hosted at the Redlands Boys &amp; Girls Club, whose staff, space, and
+            after-school members make weekly practice possible. Every Friday
+            afternoon, our volunteer coaches set up boards in the Club's game room and open
+            it up to any club member who wants to learn. See Redlands Boys &amp; Girls Club's website for more information about their programs and membership.
+          </p>
+          <a href="https://www.begreatie.org/" target="_blank" rel="noopener noreferrer" class="partner-credit__link">
+            Visit Redlands Boys &amp; Girls Club
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="13 5 20 12 13 19"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="join" class="section">
+    <div class="container">
+      <div class="bento">
+
+        <div class="card span-2">
+          <h3 style="font-size:1.25rem;">When we meet</h3>
+          <p style="font-family:var(--font-mono); font-size:0.875rem; color:var(--color-ink-muted); margin-top:0.75rem; line-height:1.8;">
+            Tuesdays &amp; Thursdays<br>3:30&ndash;5:00pm<br>Redlands Boys &amp; Girls Club, game room<br>Grades 3&ndash;8 &middot; drop-in friendly
+          </p>
+        </div>
+
+        <div class="card span-2">
+          <h3 style="font-size:1.25rem;">What kids learn</h3>
+          <ul style="margin-top:0.75rem; color:var(--color-ink-muted); padding-left:1.1rem; line-height:1.9;">
+            <li>Opening principles &amp; board vision</li>
+            <li>Patience under pressure</li>
+            <li>Win/loss sportsmanship</li>
+            <li>Tournament prep for club &amp; regional events</li>
+          </ul>
+        </div>
+
+        <div class="card span-2">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--color-terracotta)" stroke-width="1.5" aria-hidden="true"><path d="M7 17h10M8 17l.6-3.4c.2-1 .1-1.8-.5-2.6L6 8l1-2 3 1.4c.6.3 1 .3 1.6 0L15 6l1 2-2.1 3c-.6.8-.7 1.6-.5 2.6l.6 3.4"/></svg>
+          <p style="font-family:var(--font-display); font-style:italic; font-size:1.125rem; margin-top:1rem; color:var(--color-ink);">
+            &ldquo;I didn't think I was a &lsquo;chess person&rsquo; until Coach Danny showed
+            me my first fork. Now I run the beginners' table.&rdquo;
+          </p>
+          <p style="margin-top:0.75rem; font-size:0.875rem; color:var(--color-ink-muted);">&mdash; Aiden, age 11, Club member</p>
+        </div>
+
+        <div class="card span-2" style="padding:0; overflow:hidden;">
+          <img src="https://picsum.photos/seed/chess-tournament-focus/800/640" width="800" height="640" style="width:100%; height:100%; object-fit:cover; display:block;" alt="A young chess player resting their chin on their hand while studying the board.">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container" style="text-align:center;">
+      <h2 style="font-size:1.75rem; max-width:32rem; margin:0 auto;">Bring chess to your school or club</h2>
+      <p class="max-prose" style="margin:1rem auto 0; color:var(--color-ink-muted);">
+        We're always looking for the next site partner. If your school, library, or
+        community center has a room and an afternoon to spare, we can bring the boards.
+      </p>
+      <a href="mailto:hello@iesteamforall.org" class="btn btn-primary" style="margin-top:1.5rem;">Get in Touch</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div style="display:grid; grid-template-columns:1fr; gap:2.5rem;" class="md-grid-4">
+      <div>
+        <a href="index.html" class="brand" style="color:#fff;">
+          <img src="assets/logo-mark-nav.png" alt="Inland Empire STEAM for All logo" class="brand__mark brand__mark--sm">
+          <span>IE STEAM for All</span>
+        </a>
+        <p style="margin-top:1rem; font-size:0.875rem; color:#B7AF9C; max-width:22rem;">
+          Free STEM and STEAM enrichment for Inland Empire youth, built with the schools and
+          community partners kids already trust.
+        </p>
+        <p style="margin-top:1rem; font-size:0.875rem; display:flex; align-items:center; gap:0.5rem;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-7.2-7-12a7 7 0 1 1 14 0c0 4.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.3"/></svg>
+          Serving San Bernardino &amp; Riverside counties
+        </p>
+      </div>
+      <div>
+        <h4>Programs</h4>
+        <a href="chess-program.html">Chess Program</a><br>
+        <a href="math-club.html">Math Club</a><br>
+        <a href="private-coaching.html">Private Coaching</a>
+      </div>
+      <div>
+        <h4>Organization</h4>
+        <a href="about.html">About Us</a><br>
+        <a href="index.html#get-involved">Get Involved</a><br>
+        <a href="mailto:hello@iesteamforall.org">Contact</a>
+      </div>
+      <div>
+        <h4>Stay updated</h4>
+        <form onsubmit="return handleNewsletterSubmit(event)">
+          <label for="newsletter-email" class="footer-label">Email address</label>
+          <div style="display:flex; gap:0.5rem;">
+            <input id="newsletter-email" name="email" type="email" required placeholder="you@example.com" class="footer-input" aria-describedby="newsletter-hint">
+            <button type="submit" class="btn btn-outline-light" style="padding:0 1.25rem;" aria-label="Sign up for updates">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>
+            </button>
+          </div>
+          <p id="newsletter-hint" class="footer-form-status" style="margin-top:0.5rem; font-size:0.75rem; color:#948C7B;">Program updates a few times a year. No spam.</p>
+        </form>
+      </div>
+    </div>
+    <div style="margin-top:3rem; padding-top:1.5rem; border-top:1px solid #3C3830;">
+      <p style="font-size:0.75rem; color:#948C7B;">
+        &copy; 2026 Inland Empire STEAM for All. A hypothetical nonprofit concept built for
+        design purposes &mdash; names, partners, and figures are illustrative filler content.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+<style>
+  @media (min-width: 768px) {
+    .md-grid-4 { grid-template-columns: 1.4fr 1fr 1fr 1.2fr !important; }
+  }
+</style>
+</body>
+</html>

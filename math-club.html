@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Youth Math Club | Inland Empire STEAM for All</title>
+<meta name="description" content="A free, weekly youth math club run in partnership with the Cope Middle School Math Club.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="components.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<header class="site-header">
+  <div class="container site-header__row">
+    <a href="index.html" class="brand">
+      <img src="assets/logo-mark-nav.png" alt="Inland Empire STEAM for All logo" class="brand__mark">
+      <span>IE STEAM for All</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Primary" style="display:flex; align-items:center; gap:1.75rem;">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="chess-program.html" class="nav-link">Chess Program</a>
+      <a href="math-club.html" class="nav-link" aria-current="page">Math Club</a>
+      <a href="private-coaching.html" class="nav-link">Private Coaching</a>
+      <a href="about.html" class="nav-link">About Us</a>
+      <a href="index.html#get-involved" class="btn btn-primary">Donate</a>
+    </nav>
+    <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" onclick="toggleMobileMenu(this)">
+      <svg id="nav-icon-menu" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg id="nav-icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" style="display:none;" aria-hidden="true"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+    </button>
+  </div>
+  <nav class="mobile-menu container" id="mobile-menu" aria-label="Mobile">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="chess-program.html" class="nav-link">Chess Program</a>
+    <a href="math-club.html" class="nav-link" aria-current="page">Math Club</a>
+    <a href="private-coaching.html" class="nav-link">Private Coaching</a>
+    <a href="about.html" class="nav-link">About Us</a>
+    <a href="index.html#get-involved" class="btn btn-primary" style="margin-top:0.5rem; align-self:flex-start;">Donate</a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section class="container" style="padding-top:2rem;">
+    <div class="hero hero--full-bleed">
+      <img src="https://picsum.photos/seed/chess-program-students/1600/900" width="1600" height="900" alt="A middle school student writing an equation on a whiteboard while classmates look on.">
+      <div class="hero--full-bleed__content">
+        <span class="tag tag--green" style="margin-bottom:1rem;">Youth Math Club</span>
+        <h1 style="font-size:2.5rem; max-width:34rem;">Where numbers click.</h1>
+        <p style="max-width:32rem; margin-top:1rem; color:#EDE8DC;">
+          A free, weekly problem-solving club for Inland Empire middle schoolers &mdash;
+          built to make math feel less like a test and more like a puzzle worth chasing.
+        </p>
+        <a href="#join" class="btn btn-primary" style="margin-top:1.5rem;">Join a Session</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container max-prose">
+      <p class="eyebrow">Program overview</p>
+      <h2 style="font-size:1.75rem; margin-top:0.5rem; margin-bottom:1.25rem;">Math, off the worksheet</h2>
+      <p style="color:var(--color-ink-muted); font-size:1.0625rem;">
+        Our Youth Math Club is open to any student in grades 6 through 8. Each week, members
+        work in small teams on problems that don't show up on a typical homework sheet
+        &mdash; logic puzzles, pattern-hunting, and the kind of multi-step questions that
+        reward a good guess-and-check as much as a memorized formula.
+      </p>
+      <p style="color:var(--color-ink-muted); font-size:1.0625rem; margin-top:1rem;">
+        The goal isn't just sharper test scores, though those tend to follow. It's helping
+        kids see themselves as people who are good at math, out loud, in front of their
+        friends. Members who want more of a challenge can try out for regional math
+        competitions each year.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="partner-credit">
+        <div class="partner-credit__mark" aria-hidden="true" style="background:var(--color-green-pale-bg); color:var(--color-green-pale-text);">CM</div>
+        <div class="partner-credit__body">
+          <p class="eyebrow" style="margin-bottom:0.35rem;">In partnership with</p>
+          <p class="partner-credit__name">Cope Middle School Math Club</p>
+          <p style="color:var(--color-ink-muted); margin-top:0.5rem; max-width:38rem;">
+            Cope Middle School opens its library every Wednesday afternoon for our sessions,
+            giving members a familiar, comfortable space to tackle problems together right
+            after the final bell rings.
+          </p>
+          <a href="#" class="partner-credit__link" style="color:var(--color-green);">
+            Visit Cope Middle School Math Club
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="13 5 20 12 13 19"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="join" class="section">
+    <div class="container">
+      <div class="bento">
+
+        <div class="card span-2">
+          <h3 style="font-size:1.25rem;">When we meet</h3>
+          <p style="font-family:var(--font-mono); font-size:0.875rem; color:var(--color-ink-muted); margin-top:0.75rem; line-height:1.8;">
+            Wednesdays<br>3:15&ndash;4:30pm<br>Cope Middle School, library<br>Grades 6&ndash;8 &middot; drop-in friendly
+          </p>
+        </div>
+
+        <div class="card span-2">
+          <h3 style="font-size:1.25rem;">What kids learn</h3>
+          <ul style="margin-top:0.75rem; color:var(--color-ink-muted); padding-left:1.1rem; line-height:1.9;">
+            <li>Problem-solving strategies beyond the textbook</li>
+            <li>Speed &amp; mental math tricks</li>
+            <li>Team-based competition rounds</li>
+            <li>Confidence presenting a solution out loud</li>
+          </ul>
+        </div>
+
+        <div class="card span-2">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--color-green)" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><line x1="5" y1="7" x2="19" y2="7"/><line x1="8" y1="7" x2="7" y2="19"/><line x1="16" y1="7" x2="17" y2="19"/></svg>
+          <p style="font-family:var(--font-display); font-style:italic; font-size:1.125rem; margin-top:1rem; color:var(--color-ink);">
+            &ldquo;I used to just wait for someone else to raise their hand. Now I'm usually
+            the one explaining it.&rdquo;
+          </p>
+          <p style="margin-top:0.75rem; font-size:0.875rem; color:var(--color-ink-muted);">&mdash; Camila, age 13, Club member</p>
+        </div>
+
+        <div class="card span-2" style="padding:0; overflow:hidden;">
+          <img src="https://picsum.photos/seed/math-club-whiteboard/800/640" width="800" height="640" style="width:100%; height:100%; object-fit:cover; display:block;" alt="Close-up of a whiteboard covered in a partially solved multi-step math problem.">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container" style="text-align:center;">
+      <h2 style="font-size:1.75rem; max-width:32rem; margin:0 auto;">Start a math club at your school</h2>
+      <p class="max-prose" style="margin:1rem auto 0; color:var(--color-ink-muted);">
+        We provide the curriculum, materials, and trained volunteer facilitators &mdash;
+        your school just needs a room once a week.
+      </p>
+      <a href="mailto:hello@iesteamforall.org" class="btn btn-primary" style="margin-top:1.5rem; background:var(--color-green);">Get in Touch</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div style="display:grid; grid-template-columns:1fr; gap:2.5rem;" class="md-grid-4">
+      <div>
+        <a href="index.html" class="brand" style="color:#fff;">
+          <img src="assets/logo-mark-nav.png" alt="Inland Empire STEAM for All logo" class="brand__mark brand__mark--sm">
+          <span>IE STEAM for All</span>
+        </a>
+        <p style="margin-top:1rem; font-size:0.875rem; color:#B7AF9C; max-width:22rem;">
+          Free STEM and STEAM enrichment for Inland Empire youth, built with the schools and
+          community partners kids already trust.
+        </p>
+        <p style="margin-top:1rem; font-size:0.875rem; display:flex; align-items:center; gap:0.5rem;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-7.2-7-12a7 7 0 1 1 14 0c0 4.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.3"/></svg>
+          Serving San Bernardino &amp; Riverside counties
+        </p>
+      </div>
+      <div>
+        <h4>Programs</h4>
+        <a href="chess-program.html">Chess Program</a><br>
+        <a href="math-club.html">Math Club</a><br>
+        <a href="private-coaching.html">Private Coaching</a>
+      </div>
+      <div>
+        <h4>Organization</h4>
+        <a href="about.html">About Us</a><br>
+        <a href="index.html#get-involved">Get Involved</a><br>
+        <a href="mailto:hello@iesteamforall.org">Contact</a>
+      </div>
+      <div>
+        <h4>Stay updated</h4>
+        <form onsubmit="return handleNewsletterSubmit(event)">
+          <label for="newsletter-email" class="footer-label">Email address</label>
+          <div style="display:flex; gap:0.5rem;">
+            <input id="newsletter-email" name="email" type="email" required placeholder="you@example.com" class="footer-input" aria-describedby="newsletter-hint">
+            <button type="submit" class="btn btn-outline-light" style="padding:0 1.25rem;" aria-label="Sign up for updates">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>
+            </button>
+          </div>
+          <p id="newsletter-hint" class="footer-form-status" style="margin-top:0.5rem; font-size:0.75rem; color:#948C7B;">Program updates a few times a year. No spam.</p>
+        </form>
+      </div>
+    </div>
+    <div style="margin-top:3rem; padding-top:1.5rem; border-top:1px solid #3C3830;">
+      <p style="font-size:0.75rem; color:#948C7B;">
+        &copy; 2026 Inland Empire STEAM for All. A hypothetical nonprofit concept built for
+        design purposes &mdash; names, partners, and figures are illustrative filler content.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+<style>
+  @media (min-width: 768px) {
+    .md-grid-4 { grid-template-columns: 1.4fr 1fr 1fr 1.2fr !important; }
+  }
+</style>
+</body>
+</html>

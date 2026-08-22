@@ -1,0 +1,635 @@
+/* ==========================================================================
+   INLAND EMPIRE STEAM FOR ALL — SHARED DESIGN SYSTEM
+   ==========================================================================
+   This file is the single source of truth for the site's visual identity:
+   colors, type, spacing, radius, shadow, and every reusable component
+   (nav, footer, hero, bento grid, program card, partner credit, stat strip,
+   coach-bio card, sticky note, buttons, tags).
+
+   Tailwind (loaded via CDN in each page's <head>) is used ONLY for layout
+   mechanics: grid/flex placement, responsive breakpoints, and one-off
+   spacing utilities. Every color, font, radius, shadow, and component style
+   lives here so future pages stay consistent automatically.
+
+   See design-system/MASTER.md for the documented rationale behind these
+   tokens, and design-system/pages/*.md for any page-specific overrides.
+   ========================================================================== */
+
+/* ---------- 1. DESIGN TOKENS ---------- */
+:root {
+  /* Color: warm "orange grove + citrus leaf" editorial palette */
+  --color-bg: #F7F3EC;              /* warm bone canvas */
+  --color-surface: #FFFFFF;         /* card surface */
+  --color-surface-alt: #FDFBF7;     /* alternating section surface */
+  --color-ink: #221F1B;             /* headings, nav, body text */
+  --color-ink-muted: #5C574E;       /* secondary / supporting text */
+  --color-border: #E5DFD3;          /* hairline borders, dividers */
+
+  /* Primary accent — orange grove (terracotta), used for CTAs everywhere */
+  --color-terracotta: #A8431F;
+  --color-terracotta-dark: #8A3717;
+  --color-terracotta-pale-bg: #F6E4DB;
+  --color-terracotta-pale-text: #8C3A20;
+
+  /* Secondary accent — citrus leaf green (math club / general accent) */
+  --color-green: #3D6B3F;
+  --color-green-pale-bg: #E7F0E2;
+  --color-green-pale-text: #2E4E2B;
+
+  /* Tertiary accent — desert gold (general impact / coaching accent) */
+  --color-gold: #8A6511;
+  --color-gold-pale-bg: #FAF0D8;
+  --color-gold-pale-text: #6B4E0C;
+
+  /* Focus ring — kept distinct from brand hues for clear a11y signal */
+  --color-focus: #1F6C9F;
+
+  /* Typography */
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Work Sans', -apple-system, Segoe UI, sans-serif;
+  --font-mono: 'Space Mono', 'SFMono-Regular', Consolas, monospace;
+  --font-accent: 'Caveat', cursive; /* sticky-note annotations ONLY */
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.375rem;
+  --text-2xl: 1.75rem;
+  --text-3xl: 2.25rem;
+  --text-4xl: 3rem;
+  --text-5xl: 3.75rem;
+
+  /* Spacing scale */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+
+  /* Radius scale */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 9999px;
+
+  /* Shadow scale — warm-tinted, low-opacity, diffuse */
+  --shadow-sm: 0 1px 3px rgba(34,31,27,0.06);
+  --shadow-md: 0 6px 16px rgba(34,31,27,0.08);
+  --shadow-lg: 0 20px 40px rgba(34,31,27,0.14);
+
+  /* Z-index scale */
+  --z-base: 10;
+  --z-overlay: 30;
+  --z-dropdown: 40;
+  --z-nav: 50;
+}
+
+/* ---------- 2. BASE / RESET ---------- */
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--color-ink);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+p { margin: 0; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+
+.container {
+  width: 100%;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding-left: var(--space-lg);
+  padding-right: var(--space-lg);
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-ink-muted);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: var(--space-sm);
+  background: var(--color-ink);
+  color: #fff;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-sm);
+  z-index: var(--z-nav);
+}
+.skip-link:focus {
+  left: var(--space-sm);
+}
+
+/* Focus visibility — applied to every interactive element in this file */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+.card:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------- 3. BUTTONS ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  letter-spacing: 0.02em;
+  min-height: 44px;
+  padding: 0 var(--space-xl);
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--color-terracotta);
+  color: #fff;
+}
+.btn-primary:hover { background: var(--color-terracotta-dark); }
+
+.btn-outline {
+  background: transparent;
+  border-color: var(--color-ink);
+  color: var(--color-ink);
+}
+.btn-outline:hover { background: var(--color-ink); color: #fff; }
+
+.btn-outline-light {
+  background: transparent;
+  border-color: #fff;
+  color: #fff;
+}
+.btn-outline-light:hover { background: #fff; color: var(--color-ink); }
+
+/* ---------- 4. SITE HEADER / NAV ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-nav);
+  background: rgba(247,243,236,0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.site-header__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 72px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--color-ink);
+}
+.brand__mark {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  display: block;
+  /* Source badge is a flat orange circle on a transparent canvas — a very
+     faint drop-shadow keeps it from looking pasted onto the bone background
+     at small nav sizes. Kept subtle per the "no heavy shadow" rule. */
+  filter: drop-shadow(0 1px 2px rgba(34,31,27,0.16));
+}
+.brand__mark--sm { width: 28px; height: 28px; }
+
+/* Homepage masthead brand moment (logo-wordmark-banner.png) */
+.brand-banner {
+  max-width: 36rem; /* Tailwind max-w-xl equivalent, kept in CSS for non-Tailwind reuse */
+  width: 100%;
+  margin: 0 auto;
+}
+.brand-banner img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.nav-link {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-ink-muted);
+  padding: var(--space-sm) var(--space-sm);
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: color 200ms ease, border-color 200ms ease;
+}
+.nav-link:hover,
+.nav-link[aria-current="page"] {
+  color: var(--color-ink);
+  border-color: var(--color-terracotta);
+}
+
+.nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid var(--color-border);
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  border-top: 1px solid var(--color-border);
+  padding: var(--space-md) 0;
+}
+.mobile-menu.is-open { display: flex; }
+
+@media (max-width: 1080px) {
+  .desktop-nav { display: none; }
+  .nav-toggle { display: inline-flex; }
+}
+@media (min-width: 1081px) {
+  .mobile-menu { display: none !important; }
+}
+
+/* ---------- 5. HERO ---------- */
+.hero { position: relative; }
+
+.hero--split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
+  align-items: center;
+  padding: var(--space-3xl) 0;
+}
+@media (min-width: 900px) {
+  .hero--split { grid-template-columns: 1.1fr 1fr; }
+}
+
+.hero__headline {
+  font-size: var(--text-4xl);
+  font-weight: 500;
+}
+@media (min-width: 900px) {
+  .hero__headline { font-size: var(--text-5xl); }
+}
+
+.hero__image-frame {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+}
+.hero__image-frame img { width: 100%; height: 100%; object-fit: cover; }
+
+.hero--full-bleed {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  min-height: 26rem;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: var(--shadow-lg);
+}
+.hero--full-bleed img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero--full-bleed::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(34,31,27,0.05) 0%, rgba(34,31,27,0.72) 100%);
+}
+.hero--full-bleed__content {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  padding: var(--space-2xl);
+}
+.hero--full-bleed__content h1 { color: #fff; }
+
+/* ---------- 6. BENTO GRID + CARD ---------- */
+.bento {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-lg);
+}
+@media (max-width: 900px) {
+  .bento { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .bento { grid-template-columns: 1fr; }
+}
+
+.bento .span-2 { grid-column: span 2; }
+.bento .span-3 { grid-column: span 3; }
+.bento .span-4 { grid-column: 1 / -1; }
+.bento .row-span-2 { grid-row: span 2; }
+@media (max-width: 900px) {
+  .bento .span-3 { grid-column: span 2; }
+}
+@media (max-width: 560px) {
+  .bento .span-2, .bento .span-3, .bento .span-4 { grid-column: 1 / -1; }
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 200ms ease, transform 200ms ease, border-color 200ms ease;
+}
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.card--ghost {
+  background: transparent;
+  border: 1px dashed var(--color-border);
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  color: var(--color-ink-muted);
+}
+.card--ghost:hover { transform: none; box-shadow: none; }
+
+/* ---------- 7. TAGS / PILLS ---------- */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-pill);
+}
+.tag--terracotta { background: var(--color-terracotta-pale-bg); color: var(--color-terracotta-pale-text); }
+.tag--green { background: var(--color-green-pale-bg); color: var(--color-green-pale-text); }
+.tag--gold { background: var(--color-gold-pale-bg); color: var(--color-gold-pale-text); }
+
+/* ---------- 8. PROGRAM CARD ---------- */
+.program-card__image {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  margin-bottom: var(--space-lg);
+}
+.program-card__image img { width: 100%; height: 100%; object-fit: cover; }
+
+.program-card h3 {
+  font-size: var(--text-2xl);
+  margin: var(--space-md) 0 var(--space-sm);
+}
+
+.program-card__meta {
+  display: flex;
+  gap: var(--space-lg);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-ink-muted);
+  margin-top: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+.program-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-weight: 600;
+  margin-top: var(--space-lg);
+  cursor: pointer;
+  border-bottom: 1px solid currentColor;
+}
+.program-card__link svg { transition: transform 200ms ease; }
+.program-card__link:hover svg { transform: translateX(3px); }
+
+/* ---------- 9. PARTNER CREDIT ---------- */
+.partner-credit {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  background: var(--color-surface-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-xl);
+  flex-wrap: wrap;
+}
+
+.partner-credit__mark {
+  width: 64px;
+  height: 64px;
+  min-width: 64px;
+  border-radius: var(--radius-md);
+  background: var(--color-terracotta-pale-bg);
+  color: var(--color-terracotta-pale-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--text-lg);
+}
+
+.partner-credit__body { flex: 1 1 260px; }
+
+.partner-credit__name {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 600;
+}
+
+.partner-credit__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-weight: 600;
+  color: var(--color-terracotta);
+  margin-top: var(--space-sm);
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+  transition: border-color 200ms ease;
+}
+.partner-credit__link:hover { border-color: var(--color-terracotta); }
+
+/* ---------- 10. STAT STRIP ---------- */
+.stat-card {
+  text-align: left;
+}
+.stat-card__number {
+  font-family: var(--font-mono);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  color: var(--color-terracotta);
+  display: block;
+}
+.stat-card__label {
+  font-size: var(--text-sm);
+  color: var(--color-ink-muted);
+  margin-top: var(--space-xs);
+  display: block;
+}
+
+/* ---------- 11. COACH-BIO CARD (person-card variant) ---------- */
+.coach-card__image {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  margin-bottom: var(--space-lg);
+}
+.coach-card__image img { width: 100%; height: 100%; object-fit: cover; }
+
+.coach-card h3 {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-xs);
+}
+
+.coach-card__credentials {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-ink-muted);
+  margin: var(--space-sm) 0 var(--space-md);
+  display: block;
+}
+
+/* ---------- 12. STICKY NOTE ---------- */
+.sticky-note {
+  background: #fff;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-lg);
+  max-width: 240px;
+  transform: rotate(-3deg);
+  font-family: var(--font-accent);
+  font-size: var(--text-lg);
+  color: var(--color-ink);
+  line-height: 1.3;
+}
+
+/* ---------- 13. FOOTER ---------- */
+.site-footer {
+  background: var(--color-ink);
+  color: #E9E4D8;
+  padding: var(--space-3xl) 0 var(--space-xl);
+}
+.site-footer h4 {
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-md);
+}
+.site-footer a {
+  color: #C9C2B2;
+  cursor: pointer;
+  transition: color 200ms ease;
+  display: inline-block;
+  padding: var(--space-xs) 0;
+}
+.site-footer a:hover { color: #fff; }
+
+.footer-input {
+  width: 100%;
+  min-height: 44px;
+  padding: 0 var(--space-md);
+  border-radius: var(--radius-sm);
+  border: 1px solid #4A463D;
+  background: #2E2A24;
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+}
+.footer-input::placeholder { color: #948C7B; }
+.footer-input:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 2px; }
+
+.footer-label {
+  display: block;
+  font-size: var(--text-xs);
+  color: #C9C2B2;
+  margin-bottom: var(--space-xs);
+}
+
+/* ---------- 14. CTA BAND (reused on Home + About) ---------- */
+.cta-band {
+  background: var(--color-ink);
+  color: #fff;
+  border-radius: var(--radius-lg);
+  padding: var(--space-3xl) var(--space-2xl);
+}
+.cta-band h2 { color: #fff; }
+.cta-band p { color: #D8D2C3; }
+
+/* ---------- 15. SECTION UTILITIES ---------- */
+.section { padding: var(--space-3xl) 0; }
+.section-alt { background: var(--color-surface-alt); }
+.max-prose { max-width: 42rem; }
