@@ -46,13 +46,12 @@
 <main id="main">
 
   <!-- BRAND MASTHEAD: documented use of assets/logo-wordmark-banner.png.
-       Wide source banner (6250x2344) is contained, never stretched, inside
-       a bordered card so it reads as one deliberate brand moment above the
-       hero rather than a full-bleed graphic. See design-system/MASTER.md
-       "Logo / Brand Assets" for sizing rules. -->
-  <section class="container" style="padding-top:2rem;">
-    <div style="max-width:36rem; margin:0 auto; background:#fff; border:1px solid var(--color-border); border-radius:var(--radius-lg); padding:1.5rem; box-shadow:var(--shadow-sm);">
-      <img src="assets/logo-wordmark-banner.png" alt="Inland Empire STEAM for All — sunrise and mountain wordmark banner" style="width:100%; height:auto; display:block;">
+       Wide source banner (6250x2344) spans the full viewport width,
+       edge-to-edge, as a deliberate brand moment above the hero.
+       See design-system/MASTER.md "Logo / Brand Assets" for sizing rules. -->
+  <section>
+    <div class="brand-banner">
+      <img src="assets/logo-wordmark-banner.png" alt="Inland Empire STEAM for All — sunrise and mountain wordmark banner">
     </div>
   </section>
 
@@ -258,8 +257,7 @@
     </div>
     <div style="margin-top:3rem; padding-top:1.5rem; border-top:1px solid #3C3830;">
       <p style="font-size:0.75rem; color:#948C7B;">
-        &copy; 2026 Inland Empire STEAM for All. A hypothetical nonprofit concept built for
-        design purposes &mdash; names, partners, and figures are illustrative filler content.
+        2026 Inland Empire STEAM for All
       </p>
     </div>
   </div>

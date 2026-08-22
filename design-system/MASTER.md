@@ -123,12 +123,13 @@ call, not an oversight, to avoid saying "Inland Empire STEAM for All" twice at s
 while still giving screen-space-constrained visitors readable brand text next to the icon.
 
 **Homepage masthead usage (`.brand-banner`):** the wordmark banner is placed once, directly
-below the header and above the hero on `index.html` only, inside a `max-w-xl w-full mx-auto`
-container (`.brand-banner` in `components.css` mirrors this at the CSS-variable level for any
-future non-Tailwind reuse) with the `<img>` itself set to `w-full h-auto object-contain` —
-contained, never stretched, since the source aspect ratio (~2.67:1) would distort badly under
-`object-fit: cover` or fixed dimensions. Not repeated in the footer or on program pages, to
-keep it a singular, deliberate brand moment rather than a repeated design element.
+below the header and above the hero on `index.html` only, using the `.brand-banner` component
+in `components.css`. Updated per explicit request from a contained `max-w-xl` treatment to
+**full-bleed, edge-to-edge** — `.brand-banner` no longer constrains `max-width`, and the
+`<img>` is `width:100%; height:auto; object-fit:contain` so the source aspect ratio (~2.67:1)
+still isn't distorted, it just now spans the full viewport width instead of sitting in a
+centered card. Not repeated in the footer or on program pages, to keep it a singular,
+deliberate brand moment rather than a repeated design element.
 
 **Transparency finding:** both supplied PNGs already have real alpha transparency (confirmed
 by sampling corner/edge pixels: `A = 0` outside the artwork, `A = 255` inside it) — the

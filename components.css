@@ -250,11 +250,11 @@ input:focus-visible,
 }
 .brand__mark--sm { width: 28px; height: 28px; }
 
-/* Homepage masthead brand moment (logo-wordmark-banner.png) */
+/* Homepage masthead brand moment (logo-wordmark-banner.png)
+   Full-bleed, edge-to-edge, by explicit request — no max-width/margin
+   constraint, unlike most components in this system. */
 .brand-banner {
-  max-width: 36rem; /* Tailwind max-w-xl equivalent, kept in CSS for non-Tailwind reuse */
   width: 100%;
-  margin: 0 auto;
 }
 .brand-banner img {
   width: 100%;
