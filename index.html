@@ -181,6 +181,59 @@
     </div>
   </section>
 
+  <!-- WEEKLY SCHEDULE: glance-view of the two active *group* programs' meeting times
+       (Chess Program, Math Club). Private Coaching has no fixed weekly slot, so it's
+       intentionally left off this calendar and called out in the intro copy instead.
+       See design-system/MASTER.md "`.schedule-grid` (weekly glance calendar)" for the
+       component spec. -->
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow">Plan your week</p>
+      <h2 style="font-size:1.75rem; margin-top:0.5rem; margin-bottom:0.75rem;">Weekly schedule at a glance</h2>
+      <p class="max-prose" style="color:var(--color-ink-muted); margin-bottom:2.5rem;">
+        Our two weekly group programs meet on the same day and time all season, so families
+        can plan ahead. (Private coaching is scheduled one-on-one and doesn't follow a fixed
+        weekly slot.)
+      </p>
+      <ul class="schedule-grid" aria-label="Weekly program schedule, Sunday through Saturday">
+        <li class="schedule-day schedule-day--empty">
+          <span class="schedule-day__label">Sun<span class="visually-hidden"> (Sunday)</span></span>
+          <span class="schedule-day__empty-text">No session</span>
+        </li>
+        <li class="schedule-day schedule-day--empty">
+          <span class="schedule-day__label">Mon<span class="visually-hidden"> (Monday)</span></span>
+          <span class="schedule-day__empty-text">No session</span>
+        </li>
+        <li class="schedule-day schedule-day--empty">
+          <span class="schedule-day__label">Tue<span class="visually-hidden"> (Tuesday)</span></span>
+          <span class="schedule-day__empty-text">No session</span>
+        </li>
+        <li class="schedule-day schedule-day--empty">
+          <span class="schedule-day__label">Wed<span class="visually-hidden"> (Wednesday)</span></span>
+          <span class="schedule-day__empty-text">No session</span>
+        </li>
+        <li class="schedule-day">
+          <span class="schedule-day__label">Thu<span class="visually-hidden"> (Thursday)</span></span>
+          <div class="schedule-chip schedule-chip--green">
+            <span class="schedule-chip__name">Math Club</span>
+            <span class="schedule-chip__time">3:30&ndash;4:30pm</span>
+          </div>
+        </li>
+        <li class="schedule-day">
+          <span class="schedule-day__label">Fri<span class="visually-hidden"> (Friday)</span></span>
+          <div class="schedule-chip schedule-chip--terracotta">
+            <span class="schedule-chip__name">Chess Program</span>
+            <span class="schedule-chip__time">4:00&ndash;5:00pm</span>
+          </div>
+        </li>
+        <li class="schedule-day schedule-day--empty">
+          <span class="schedule-day__label">Sat<span class="visually-hidden"> (Saturday)</span></span>
+          <span class="schedule-day__empty-text">No session</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
   <!-- GET INVOLVED / DONATE CTA -->
   <section id="get-involved" class="section">
     <div class="container">

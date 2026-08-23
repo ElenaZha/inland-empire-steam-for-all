@@ -193,6 +193,27 @@ card system extends to a third content shape (person bios) beyond programs and p
 Mono numeral (`--font-mono`, terracotta) + label. Arranged in a `.bento` row for the Home
 impact strip.
 
+### `.schedule-grid` (weekly glance calendar)
+Added to `index.html`, between "Our programs" and the donate/volunteer CTA band — a
+"here's exactly when to show up" follow-through right after the program cards. A
+semantic `<ul class="schedule-grid">` of 7 `<li class="schedule-day">` items (Sun–Sat),
+each day label set in `--font-mono` per the "schedule/meta rows use Space Mono" rule
+above (same treatment as `.program-card__meta`). Days with a session render a
+`.schedule-chip` (`--terracotta` for Chess Program, `--green` for Math Club) reusing the
+existing pale-bg/pale-text tag color pairs verbatim — no new colors were introduced.
+Every chip shows the program name as visible text plus its time, so the two programs are
+never distinguished by color alone. Empty days render a quiet dashed `.schedule-day--empty`
+treatment (same dashed-border language as `.card--ghost`) with a muted "No session" label.
+Only the two active *group* programs (Chess Program: Fri 4:00–5:00pm; Math Club: Thu
+3:30–4:30pm) appear — Private Coaching has no fixed weekly slot and is called out in the
+section's intro copy instead, rather than being forced onto the grid.
+
+**Responsive behavior:** `grid-template-columns: repeat(7, 1fr)` on desktop, collapsing to
+`repeat(4, 1fr)` at the existing `.bento` tablet breakpoint (900px) and to a single-column
+stacked list at the existing 560px mobile breakpoint — each day row switches from a
+centered vertical card to a left-label/right-status horizontal row at that point, so it
+reads as a simple agenda list rather than a cramped 7-column grid on a 375px screen.
+
 ### Buttons
 ```css
 .btn-primary { background: var(--color-terracotta); color: #fff; border-radius: var(--radius-pill); min-height: 44px; }
