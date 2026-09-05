@@ -13,13 +13,3 @@ function toggleMobileMenu(btn) {
     closeIcon.style.display = isOpen ? 'inline' : 'none';
   }
 }
-
-// Newsletter form in the footer is presentation-only (no backend in this concept build).
-function handleNewsletterSubmit(event) {
-  event.preventDefault();
-  var status = event.target.querySelector('.footer-form-status');
-  if (status) {
-    status.textContent = 'Thanks — this is a concept site, so signups aren\'t live yet.';
-  }
-  return false;
-}
